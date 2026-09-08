@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of a 1st-year B.Tech student featuring foundational skills, academic interests, and creative pursuits.">
+  <title>Shamvi Narayanan | 1st-Year B.Tech Portfolio</title>
+  
+  <!-- Typography: Editorial Serif & Refined Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Inline theme-check script to prevent Flash of Unstyled Theme (FOUC) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#bio" class="brand-title">
+        <span class="brand-indicator"></span>
+        <span class="brand-text">Shamvi<span class="brand-dim">/portfolio</span></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+        </ul>
+
+        <div class="theme-switch-wrapper">
+          <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle dark and light theme" title="Toggle Dark/Light Mode">
+            <span class="theme-label" aria-hidden="true">THEME:</span>
+            <span id="theme-status" class="theme-status-text">DARK</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Bio / Hero Section -->
+    <section id="bio" class="section hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="status-badge">
+              <span class="badge-dot"></span>
+              <span class="badge-text">1st-Year B.Tech Student &bull; Learning &amp; Building</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Hi, I'm <span class="accent-text">Shamvi Narayanan</span>.
+            </h1>
+            
+            <p class="hero-lead">
+              First-year B.Tech student exploring programming and web development, with a growing interest in building useful and creative projects.
+            </p>
+            
+            <p class="hero-description">
+              Currently learning the fundamentals of programming through C and Java while exploring web development with HTML, CSS, and JavaScript. I enjoy experimenting with small projects, learning how things work, and improving my skills through practice.
+            </p>
+
+            <div class="hero-terminal-box">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">student_manifest.sh</span>
+              </div>
+              <div class="terminal-body">
+                <p><span class="term-dim">$</span> whoami <span class="term-out">shamvi-01 (1st-Year B.Tech Student)</span></p>
+                <p><span class="term-dim">$</span> skills <span class="term-out">[C, Java, HTML, CSS, JavaScript]</span></p>
+                <p><span class="term-dim">$</span> currently_learning <span class="term-out">[Web Development, Git, Problem Solving]</span></p>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#skills" class="btn btn-primary">Explore Skills &rarr;</a>
+              <a href="#interests" class="btn btn-secondary">What I'm Learning</a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="photo-frame">
+              <div class="photo-header">
+                <span class="photo-label">IMG_REF: profile.jpg</span>
+                <span class="photo-dim">FORMAT: RAW 1:1</span>
+              </div>
+              <div class="photo-wrapper">
+                <img src="profile.jpg" alt="Profile" class="profile-img" onerror="this.classList.add('img-fallback')">
+                <div class="photo-overlay-fallback" aria-hidden="true">
+                  <div class="fallback-graphic">
+                    <span class="fallback-bracket">[</span>
+                    <span class="fallback-monogram">SN</span>
+                    <span class="fallback-bracket">]</span>
+                  </div>
+                  <span class="fallback-caption">profile.jpg</span>
+                  <span class="fallback-sub">1st-Year B.Tech Developer</span>
+                </div>
+              </div>
+              <div class="photo-footer">
+                <span class="photo-status-badge">ACTIVE // READY</span>
+                <!-- <span class="photo-hash">0x7F_SYS</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-num">01 //</span>
+            <span class="section-tag">WHAT I KNOW</span>
+          </div>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtext">
+            Programming languages and tools I am currently learning and using in small projects.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill 1: C -->
+          <article class="skill-card">
+            <div class="skill-header">
+              <span class="skill-id">[01]</span>
+              <span class="skill-category">PROGRAMMING LANGUAGE</span>
+            </div>
+            <h3 class="skill-title">C</h3>
+            <p class="skill-desc">
+              Learning C through basic programs, problem solving, arrays, functions, pointers, and introductory data structures.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">Arrays &amp; Strings</span>
+              <span class="tag">Functions</span>
+              <span class="tag">Pointers</span>
+              <span class="tag">Basic Data Structures</span>
+            </div>
+          </article>
+
+          <!-- Skill 2: HTML/CSS -->
+          <article class="skill-card">
+            <div class="skill-header">
+              <span class="skill-id">[02]</span>
+              <span class="skill-category">WEB STANDARDS</span>
+            </div>
+            <h3 class="skill-title">HTML / CSS</h3>
+            <p class="skill-desc">
+              Comfortable with the basics of building and styling web pages using HTML and CSS. Currently learning responsive layouts and better ways to structure websites.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">Flexbox</span>
+              <span class="tag">CSS Basics</span>
+              <span class="tag">Responsive Design</span>
+            </div>
+          </article>
+
+          <!-- Skill 3: Java -->
+          <article class="skill-card">
+            <div class="skill-header">
+              <span class="skill-id">[03]</span>
+              <span class="skill-category">PROGRAMMING LANGUAGE</span>
+            </div>
+            <h3 class="skill-title">Java</h3>
+            <p class="skill-desc">
+              Learning Java fundamentals and object-oriented programming while practicing basic programs and problem-solving.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">OOP Basics</span>
+              <span class="tag">Classes &amp; Objects</span>
+              <span class="tag">Methods</span>
+              <span class="tag">Problem Solving</span>
+            </div>
+          </article>
+
+          <!-- Skill 4: JavaScript -->
+          <article class="skill-card">
+            <div class="skill-header">
+              <span class="skill-id">[04]</span>
+              <span class="skill-category">WEB DEVELOPMENT</span>
+            </div>
+            <h3 class="skill-title">JavaScript</h3>
+            <p class="skill-desc">
+              Learning JavaScript for adding interactivity to websites, working with the DOM, handling events, and building small browser-based projects.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">DOM</span>
+              <span class="tag">Events</span>
+              <span class="tag">Functions</span>
+              <span class="tag">Local Storage</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="section interests-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-num">02 //</span>
+            <span class="section-tag">WHAT I'M LEARNING</span>
+          </div>
+          <h2 class="section-title">Academic Interests</h2>
+          <p class="section-subtext">
+            Areas I am currently learning about and would like to explore further as I progress through my degree.
+          </p>
+        </div>
+
+        <div class="interests-grid">
+          <!-- Interest 1: Programming &amp; Problem Solving -->
+          <article class="interest-card">
+            <div class="interest-header">
+              <span class="interest-id">[01]</span>
+              <span class="interest-focus">PROGRAMMING &bull; PRACTICE</span>
+            </div>
+            <h3 class="interest-title">Programming &amp; Problem Solving</h3>
+            <p class="interest-desc">
+              Enjoying the process of breaking problems into smaller parts and solving them using C and Java. Currently working on improving programming fundamentals through practice.
+            </p>
+            <div class="interest-tags">
+              <span class="interest-tag">C &amp; Java</span>
+              <span class="interest-tag">Problem Solving</span>
+              <span class="interest-tag">Programming Basics</span>
+            </div>
+          </article>
+
+          <!-- Interest 2: Web Development -->
+          <article class="interest-card">
+            <div class="interest-header">
+              <span class="interest-id">[02]</span>
+              <span class="interest-focus">WEB &bull; FRONTEND</span>
+            </div>
+            <h3 class="interest-title">Web Development</h3>
+            <p class="interest-desc">
+              Interested in building websites and learning how frontend technologies work together. Currently exploring HTML, CSS, and JavaScript through small projects.
+            </p>
+            <div class="interest-tags">
+              <span class="interest-tag">HTML</span>
+              <span class="interest-tag">CSS</span>
+              <span class="interest-tag">JavaScript</span>
+            </div>
+          </article>
+
+          <!-- Interest 3: Learning New Technologies -->
+          <article class="interest-card">
+            <div class="interest-header">
+              <span class="interest-id">[03]</span>
+              <span class="interest-focus">EXPLORATION &bull; PROJECTS</span>
+            </div>
+            <h3 class="interest-title">Learning New Technologies</h3>
+            <p class="interest-desc">
+              Exploring different tools and technologies through small experiments and projects. Interested in understanding what I can build as I learn more.
+            </p>
+            <div class="interest-tags">
+              <span class="interest-tag">Projects</span>
+              <span class="interest-tag">Experimentation</span>
+              <span class="interest-tag">Learning</span>
+            </div>
+          </article>
+
+          <!-- Interest 4: Computer Science Fundamentals -->
+          <article class="interest-card">
+            <div class="interest-header">
+              <span class="interest-id">[04]</span>
+              <span class="interest-focus">LEARNING &bull; FUNDAMENTALS</span>
+            </div>
+            <h3 class="interest-title">Computer Science Fundamentals</h3>
+            <p class="interest-desc">
+              Building a stronger foundation in programming, data structures, algorithms, and core computer science concepts during my first year.
+            </p>
+            <div class="interest-tags">
+              <span class="interest-tag">DSA</span>
+              <span class="interest-tag">Algorithms</span>
+              <span class="interest-tag">Programming</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section hobbies-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-meta">
+            <span class="section-num">03 //</span>
+            <span class="section-tag">OUTSIDE CODE</span>
+          </div>
+          <h2 class="section-title">Hobbies &amp; Interests</h2>
+          <p class="section-subtext">
+            Things I enjoy outside academics and programming.
+          </p>
+        </div>
+
+        <div class="hobbies-grid">
+          <!-- Hobby 1: Music -->
+          <article class="hobby-card">
+            <div class="hobby-index">[01]</div>
+            <h3 class="hobby-title">Music</h3>
+            <p class="hobby-tagline">Listening, exploring, and discovering new music</p>
+            <p class="hobby-desc">
+              I enjoy listening to music in my free time and exploring different genres and artists.
+            </p> 
+             
+          </article>
+
+          <!-- Hobby 2: Beat Making -->
+          <article class="hobby-card">
+            <div class="hobby-index">[02]</div>
+            <h3 class="hobby-title">Creative Projects</h3>
+            <p class="hobby-tagline">Trying out ideas and making things just for fun</p>
+            <p class="hobby-desc">
+              I like experimenting with small creative and technical projects and seeing where an idea takes me.
+            </p>
+            <div class="hobby-meta-box">
+              <div class="hobby-meta-item">
+                <span class="meta-k">Trackers:</span>
+                <span class="meta-v">Music &amp; Creativity</span>
+              </div>
+              <div class="hobby-meta-item">
+                <span class="meta-k">Style:</span>
+                <span class="meta-v">Exploring different sounds</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Hobby 3: Logic Puzzles -->
+          <article class="hobby-card">
+            <div class="hobby-index">[03]</div>
+            <h3 class="hobby-title">Games &amp; Puzzles</h3>
+            <p class="hobby-tagline">Problem solving, strategy, and a little bit of friendly competition</p>
+            <p class="hobby-desc">
+              I enjoy games and puzzles that make me think, especially when they involve strategy, logic, or problem solving.
+            </p>
+            <div class="hobby-meta-box">
+              <div class="hobby-meta-item">
+                <span class="meta-k">Favorites:</span>
+                <span class="meta-v">Chess &amp; puzzles</span>
+              </div>
+              <div class="hobby-meta-item">
+                <span class="meta-k">Focus:</span>
+                <span class="meta-v">Strategy &amp; Problem Solving</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">shamvi narayanan // 2026</div>
+        <p class="footer-copy">Built with HTML, CSS, and JavaScript while learning and experimenting with web development.</p>
+      </div>
+
+      <div class="footer-col footer-links-col">
+        <span class="footer-heading">DIRECTORY</span>
+        <ul class="footer-links">
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-connect-col">
+        <span class="footer-heading">CONNECT</span>
+        <div class="connect-tags">
+          <a href="#" class="connect-tag">[ Email ]</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="connect-tag">[ GitHub ]</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="connect-tag">[ LinkedIn ]</a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
